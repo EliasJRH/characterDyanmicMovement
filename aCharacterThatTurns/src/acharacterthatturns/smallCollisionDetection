@@ -1,0 +1,61 @@
+    Rectangle playerHitBoxTL = new Rectangle(515, 270, 45, 40);
+    Rectangle playerHitBoxTR = new Rectangle(560, 270, 40, 40);
+    Rectangle playerHitBoxBL = new Rectangle(507, 310, 53, 55);
+    Rectangle playerHitBoxBR = new Rectangle(565, 310, 35, 55);
+    Rectangle player2HitBox = new Rectangle(900, 300, 120, 120);
+    
+      @Override
+    public void actionPerformed(ActionEvent arg0) {
+        if (playerHitBoxBR.intersects(player2HitBox)) {
+            movePlayerUpLeft();
+        }
+        if (playerHitBoxTL.intersects(player2HitBox)){
+            movePlayerDownRight();
+        }
+        if(playerHitBoxTR.intersects(player2HitBox)){
+            movePlayerDownLeft();
+        }
+        if(playerHitBoxBL.intersects(player2HitBox)){
+            movePlayerUpRight();
+        }
+    }
+
+    public void movePlayerUpLeft() {
+        //JOptionPane.showMessageDialog(null, "UL");
+        thePlayer.setLocation(thePlayer.getLocation().x - 50, thePlayer.getLocation().y - 50);
+        bullet1.setLocation(bullet1.getLocation().x - 50, bullet1.getLocation().y - 50);
+        playerHitBoxTL.setLocation(playerHitBoxTL.getLocation().x - 50, playerHitBoxTL.getLocation().y - 50);
+        playerHitBoxTR.setLocation(playerHitBoxTR.getLocation().x - 50, playerHitBoxTR.getLocation().y - 50);
+        playerHitBoxBL.setLocation(playerHitBoxBL.getLocation().x - 50, playerHitBoxBL.getLocation().y - 50);
+        playerHitBoxBR.setLocation(playerHitBoxBR.getLocation().x - 50, playerHitBoxBR.getLocation().y - 50);
+    }
+    
+    public void movePlayerUpRight() {
+        //JOptionPane.showMessageDialog(null, "UR");
+        thePlayer.setLocation(thePlayer.getLocation().x + 50, thePlayer.getLocation().y - 50);
+        bullet1.setLocation(bullet1.getLocation().x + 50, bullet1.getLocation().y - 50);
+        playerHitBoxTL.setLocation(playerHitBoxTL.getLocation().x + 50, playerHitBoxTL.getLocation().y - 50);
+        playerHitBoxTR.setLocation(playerHitBoxTR.getLocation().x + 50, playerHitBoxTR.getLocation().y - 50);
+        playerHitBoxBL.setLocation(playerHitBoxBL.getLocation().x + 50, playerHitBoxBL.getLocation().y - 50);
+        playerHitBoxBR.setLocation(playerHitBoxBR.getLocation().x + 50, playerHitBoxBR.getLocation().y - 50);
+    }
+    
+    public void movePlayerDownLeft() {
+        //JOptionPane.showMessageDialog(null, "DL");
+        thePlayer.setLocation(thePlayer.getLocation().x - 50, thePlayer.getLocation().y + 50);
+        bullet1.setLocation(bullet1.getLocation().x - 50, bullet1.getLocation().y + 50);
+        playerHitBoxTL.setLocation(playerHitBoxTL.getLocation().x - 50, playerHitBoxTL.getLocation().y + 50);
+        playerHitBoxTR.setLocation(playerHitBoxTR.getLocation().x - 50, playerHitBoxTR.getLocation().y + 50);
+        playerHitBoxBL.setLocation(playerHitBoxBL.getLocation().x - 50, playerHitBoxBL.getLocation().y + 50);
+        playerHitBoxBR.setLocation(playerHitBoxBR.getLocation().x - 50, playerHitBoxBR.getLocation().y + 50);
+    }
+    
+    public void movePlayerDownRight() {
+        //JOptionPane.showMessageDialog(null, "DR");
+        thePlayer.setLocation(thePlayer.getLocation().x + 50, thePlayer.getLocation().y + 50);
+        bullet1.setLocation(bullet1.getLocation().x + 50, bullet1.getLocation().y + 50);
+        playerHitBoxTL.setLocation(playerHitBoxTL.getLocation().x + 50, playerHitBoxTL.getLocation().y + 50);
+        playerHitBoxTR.setLocation(playerHitBoxTR.getLocation().x + 50, playerHitBoxTR.getLocation().y + 50);
+        playerHitBoxBL.setLocation(playerHitBoxBL.getLocation().x + 50, playerHitBoxBL.getLocation().y + 50);
+        playerHitBoxBR.setLocation(playerHitBoxBR.getLocation().x + 50, playerHitBoxBR.getLocation().y + 50);
+    }
